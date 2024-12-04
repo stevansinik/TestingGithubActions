@@ -1,6 +1,9 @@
 on:
   pull_request:
     types: [closed]
+permissions:
+  contents: write
+  issues: write
 jobs:
   remove-comments:
     if: github.event.pull_request.merged == true
